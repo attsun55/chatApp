@@ -1,16 +1,17 @@
 <script type="text/javascript">
   $(function(){
-    var pusher  = new Pusher("<%= '取得したPusher.app_key' %>");
+    var pusher  = new Pusher("<%= '6f51c830bd0175d960c7' %>");
     var channel = pusher.subscribe("channel");
     channel.bind("event", function(html) {
       $("ul").prepend(html);
     });
   });
   $(document).ready(function(){
+    alert("aaaaaaaaaaaaa----------------")
     $("#post").click(function(){
       $.ajax({
         type: "POST",
-        url: "/pusher/create",
+        url: "/chat/create",
         data: "text="+$('#text').val(),
         success: function() {},
       });

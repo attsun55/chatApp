@@ -60,6 +60,6 @@ Sample::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   match "chats", :controller => "chats", :action => "index"
-  match "chats/create", :controller => "chats", :action => "create", :via => :post
+  match "chat/create", :controller => "chats", :action => "create", :via => :post
 
 end
