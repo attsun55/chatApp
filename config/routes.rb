@@ -1,4 +1,8 @@
 Sample::Application.routes.draw do
+  devise_for :users
+
+  get "login/index"
+
   # resources :chats
   # The priority is based upon order of creation:
   # first created -> highest priority.
