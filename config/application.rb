@@ -58,5 +58,8 @@ module Sample
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-  end
+ 
+    # deploying Rails 3.1 on Heroku
+    config.assets.initialize on precompile = false
+ end
 end
