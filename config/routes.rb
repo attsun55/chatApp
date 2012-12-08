@@ -1,9 +1,9 @@
 Sample::Application.routes.draw do
-  get "home/index"
 
   devise_for :users
 
   get "login/index"
+  get "home/index"
 
   # resources :chats
   # The priority is based upon order of creation:
