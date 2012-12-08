@@ -60,6 +60,6 @@ module Sample
     config.assets.version = '1.0'
  
     # deploying Rails 3.1 on Heroku
-    config.assets.initialize on precompile = false
+    config.assets.initialize_on_precompile = false
  end
 end
