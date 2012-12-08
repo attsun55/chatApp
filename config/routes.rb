@@ -1,4 +1,6 @@
 Sample::Application.routes.draw do
+  get "home/index"
+
   devise_for :users
 
   get "login/index"
@@ -61,7 +63,9 @@ Sample::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 
+  root :to => 'home#index'
   match "chats", :controller => "chats", :action => "index"
   match "chat/create", :controller => "chats", :action => "create", :via => :post
-
+  match "home/index", :as => :user_root # ログイン後の遷移パス
+  
 end
