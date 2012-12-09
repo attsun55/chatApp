@@ -1,8 +1,11 @@
 class ChatsController < ApplicationController
+ 
+  before_filter :authenticate_user!, :only => :index
+
   def index
   end
+
   def create
-    p "ok--------------"
     Pusher["channel"].trigger("event", params[:text]+"<br />")
     render :text => "success"
   end

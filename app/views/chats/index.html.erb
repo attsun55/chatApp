@@ -17,6 +17,10 @@
     });
   })
 </script>
+
+<% if user_signed_in? %>
+  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+<% end %><br/>
 <input type="text" id="text" />
 <input type="button" id="post">送信</input>
 
